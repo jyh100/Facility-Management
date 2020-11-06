@@ -1,3 +1,10 @@
+#!/usr/bin/env python3.6.8
+# -*- coding: utf-8 -*-
+# Copyright:    Yuhan Jiang
+# Email:        yuhan.jiang@marquette.edu
+# Date:         11/05/2020
+# Discriptions : image_label augmentation with projection
+
 import numpy as np
 import cv2 as cv
 import random
