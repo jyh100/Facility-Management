@@ -8,6 +8,7 @@
 import numpy as np
 import cv2 as cv
 import random
+import Image_Color_Adjustment as ColorAdj
 
 img=cv.imread('D:/CentOS/Drawing/M1/M1.png')
 label=cv.imread('D:/CentOS/Drawing/M1/M1Label_image.jpg')
@@ -87,6 +88,7 @@ def image_label_augmentation(img,label):
     img=cv.warpPerspective(img,PerspectiveMatrix,(cols,rows),borderValue=(255,255,255))
     label=cv.warpPerspective(label,PerspectiveMatrix,(cols,rows),borderValue=(255,255,255))
     #endregion
+    img=ColorAdj.Image_Color_Adjustment(img)
     min_x,max_x,min_y,max_y=find_margin_corners(np.array(img),qsize=128,savefile_bool=True)
     return img[min_y:max_y,min_x:max_x],label[min_y:max_y,min_x:max_x]
 
