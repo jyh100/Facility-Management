@@ -57,7 +57,7 @@ def image_label_augmentation(img,label):
     rdms=1/10*random.randint(5,10)
     img=cv.resize(img,(int(rdms*width),int(rdms*height)))#resize
     label=cv.resize(label,(int(rdms*width),int(rdms*height)))
-    #region projection
+    #region Perspective
     rows,cols=img.shape[:2]
     rdmp=random.randint(0,3)
     c=1/10*random.randint(1,10)
